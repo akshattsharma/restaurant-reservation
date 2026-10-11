@@ -58,9 +58,9 @@ export default function Home() {
 
         <form className="search-card" onSubmit={submit}>
           <Dropdown id="state" label="State" value={state} options={states} onChange={pickState}
-            placeholder="Select state" busy={loadingStates} disabled={loadingStates} />
+            placeholder="Select state" busy={loadingStates} />
           <Dropdown id="city" label="City" value={city} options={cities} onChange={setCity}
-            placeholder="Select city" busy={loadingCities} disabled={!state || loadingCities} />
+            placeholder="Select city" busy={loadingCities} disabled={!state} />
           <button type="submit" id="searchBtn" className="btn primary" disabled={!state || !city}>
             Search
           </button>

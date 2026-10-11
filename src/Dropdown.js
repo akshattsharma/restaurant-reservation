@@ -41,7 +41,7 @@ export default function Dropdown({ id, label, value, options, onChange, placehol
       </div>
       {open && (
         <ul id={`${id}-list`} className="dd-list" role="listbox">
-          {options.length === 0 && <li className="dd-empty">No options</li>}
+          {options.length === 0 && <li className="dd-empty">{busy ? "Loading…" : "No options"}</li>}
           {options.map((o) => (
             <li
               key={o}

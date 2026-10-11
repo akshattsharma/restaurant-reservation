@@ -29,3 +29,9 @@ export function hasBooking({ name, address, date, time }) {
     (b) => b.name === name && b.address === address && b.date === date && b.time === time
   );
 }
+
+export function removeBookingAt(index) {
+  const list = getBookings().filter((_, i) => i !== index);
+  save(list);
+  return list;
+}
