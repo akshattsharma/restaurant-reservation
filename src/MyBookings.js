@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { FiCalendar, FiClock, FiStar } from "react-icons/fi";
-import { getBookings, removeBooking } from "./storage";
+import { getBookings, removeBooking } from "./Storage";
 
 const prettyDate = (iso) => {
   const [y, m, d] = iso.split("-").map(Number);

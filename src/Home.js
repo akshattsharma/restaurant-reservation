@@ -5,7 +5,7 @@ import { Pagination } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
 import Dropdown from "./Dropdown";
-import { fetchStates, fetchCities } from "./api";
+import { fetchStates, fetchCities } from "./Api";
 
 const OFFERS = [
   { title: "Reservations are always free", text: "No booking fees, no hidden charges." },

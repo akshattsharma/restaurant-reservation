@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Link, useSearchParams } from "react-router-dom";
 import { FiMapPin, FiStar } from "react-icons/fi";
-import { fetchRestaurants } from "./api";
+import { fetchRestaurants } from "./Api";
 import BookingPanel from "./BookingPanel";
 
 export default function Results() {
