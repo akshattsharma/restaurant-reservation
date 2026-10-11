@@ -26,6 +26,7 @@ export default function Dropdown({ id, label, value, options, onChange, placehol
         role="combobox"
         aria-haspopup="listbox"
         aria-expanded={open}
+        aria-controls={`${id}-list`}
         aria-labelledby={`${id}-label`}
         aria-disabled={disabled}
         tabIndex={disabled ? -1 : 0}
@@ -39,7 +40,7 @@ export default function Dropdown({ id, label, value, options, onChange, placehol
         <FiChevronDown aria-hidden="true" />
       </div>
       {open && (
-        <ul className="dd-list" role="listbox">
+        <ul id={`${id}-list`} className="dd-list" role="listbox">
           {options.length === 0 && <li className="dd-empty">No options</li>}
           {options.map((o) => (
             <li
